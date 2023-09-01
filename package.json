@@ -1,0 +1,31 @@
+{
+  "name": "anime-chill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dayjs": "^1.11.9",
+    "discord-sync-commands-v2": "^1.0.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.13.20",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "start": "rm -r dist/ ||: && tsc && node dist/app.js",
+    "clean": "rm -r dist/",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matyeu/anime-chill.git"
+  },
+  "author": "matyeu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matyeu/anime-chill/issues"
+  },
+  "homepage": "https://github.com/matyeu/anime-chill#readme"
+}
