@@ -1,4 +1,4 @@
-import {getFilesRecursive, AcClient} from "./index";
+import { getFilesRecursive, AcClient } from "./index";
 import path from "path";
 import chalk from 'chalk';
 
@@ -13,33 +13,41 @@ console.log('')
 
 export function loadCommands(client: AcClient) {
     let commandFiles = getFilesRecursive(path.resolve(__dirname, "../Commands"));
+    let i = 0;
     for (const commandFile of commandFiles) {
+        i++
         import(commandFile).then(exports => {
             let matches = commandFile.match(/([^\\\/:*?"<>|\r\n]+)\.\w*$/) ?? [];
             let commandName = matches[1];
             if (!commandName) return;
-            Logger.command(`${commandName}`)
             if (exports.slash) client.slashCommands.set(exports.slash.data.name, exports);
             else client.messageCommands.set(commandName, exports);
         });
     }
 
+    Logger.command(`${i} loaded commands`);
+
 };
 
 export function loadEvents(client: AcClient) {
     let eventFiles = getFilesRecursive(path.resolve(__dirname, "../Events"));
+    let i = 0;
     for (const eventFile of eventFiles) {
+        i++
         let matches = eventFile.match(/([^\\\/:*?"<>|\r\n]+)\.\w*$/) ?? [];
         let eventName = matches[1];
         if (!eventName) continue;
-        Logger.event(`${eventName}`)
         client.on(eventName, (...args) => import(eventFile).then(async listener => await listener.default(client, ...args)));
     }
+
+    Logger.event(`${i} loaded events`);
 };
 
 export function loadButtons(client: AcClient) {
     let buttonFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Buttons"));
+    let i = 0;
     for (const buttonFile of buttonFiles) {
+        i++
         import(buttonFile).then(exports => {
             let matches = buttonFile.match(/([^\\\/:*?"<>|\r\n]+)\.\w*$/) ?? [];
             let buttonName = matches[1];
@@ -48,11 +56,15 @@ export function loadButtons(client: AcClient) {
             else client.buttons.set(buttonName, exports);
         });
     }
+
+    Logger.button(`${i} loaded buttons`)
 };
 
 export function loadSelectMenus(client: AcClient) {
     let selectFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Selectmenus"));
+    let i = 0;
     for (const selectFile of selectFiles) {
+        i++
         import(selectFile).then(exports => {
             let matches = selectFile.match(/([^\\\/:*?"<>|\r\n]+)\.\w*$/) ?? [];
             let selectName = matches[1];
@@ -61,11 +73,15 @@ export function loadSelectMenus(client: AcClient) {
             else client.selects.set(selectName, exports);
         });
     }
+
+    Logger.select(`${i} loaded selects`)
 };
 
 export function loadModals(client: AcClient) {
     let modalFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Modals"));
+    let i = 0;
     for (const modalFile of modalFiles) {
+        i++
         import(modalFile).then(exports => {
             let matches = modalFile.match(/([^\\\/:*?"<>|\r\n]+)\.\w*$/) ?? [];
             let modalName = matches[1];
@@ -74,4 +90,6 @@ export function loadModals(client: AcClient) {
             else client.modals.set(modalName, exports);
         });
     }
+
+    Logger.modal(`${i} loaded modals`)
 };

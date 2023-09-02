@@ -23,11 +23,19 @@ export function client(content: string) {
     write(content, 'black', 'bgBlue', 'CLIENT', false)
 }
 
-export function dashboard(content: string) {
-    write(content, 'black', 'bgCyan', 'DASHB', false)
+export function button(content: string) {
+    write(content, 'black', 'bgCyan', 'BTN', false)
 }
 
-export function modules(content: string) {
+export function select(content: string) {
+    write(content, 'white', 'bgWhite', 'SLT', false)
+}
+
+export function modal(content: string) {
+    write(content, 'white', 'bgYellow', 'MDL', false)
+}
+
+export function module(content: string) {
     write(content, 'black', 'bgWhite', 'MODULE', false)
 }
 
