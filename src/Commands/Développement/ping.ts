@@ -30,7 +30,7 @@ export default async function (client: AcClient, interaction: CommandInteraction
 
 export const slash = {
     data: {
-        name: "ping",
+        name: __filename.slice(__dirname.length + 1, __filename.length - 3),
         description: "Ping ? Pong !",
         category: "Administration",
         permissions: ["Administrator"],
