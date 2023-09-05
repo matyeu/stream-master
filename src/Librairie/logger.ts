@@ -28,7 +28,7 @@ export function button(content: string) {
 }
 
 export function select(content: string) {
-    write(content, 'white', 'bgWhite', 'SLT', false)
+    write(content, 'black', 'bgWhite', 'SLT', false)
 }
 
 export function modal(content: string) {
@@ -37,6 +37,10 @@ export function modal(content: string) {
 
 export function module(content: string) {
     write(content, 'black', 'bgWhite', 'MODULE', false)
+}
+
+export function database(content: string) {
+    write(content, 'black', 'bgWhite', 'DB', false)
 }
 
 function write(content: string, tagColor: string, bgTagColor: string, tag: string, error = false) {
