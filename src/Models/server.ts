@@ -15,6 +15,17 @@ const Server = model(
             commandes: Array,
             category: Array,
         },
+        channels: {
+            catalog: String,
+            research: String,
+            support: String,
+            soutien: String,
+            shop: String,
+            suggestion: String,
+        },
+        modules: {
+            informations: Boolean
+        }
     })
 )
 
@@ -27,12 +38,23 @@ export const def = {
         commandes: Array,
         category: Array,
     },
+    channels: {
+        catalog: "",
+        research: "",
+        support: "",
+        soutien: "",
+        shop: "",
+        suggestion: ""
+    },
+    modules: {
+        informations: false
+    }
 };
 
 export async function create(id: Snowflake) {
     let guild = new Server(createMissingProperties(def, { serverId: id }));
     await guild.save();
-    Logger.client("Creating a server in the database");
+    Logger.database("Creating a server in the database");
     return guild;
 }
 
@@ -47,7 +69,7 @@ export async function edit(id: Snowflake, data: object) {
     let guild = await Server.findOneAndUpdate({ serverId: id }, data, {
         new: true,
     });
-    Logger.client("Updating a server in the database");
+    Logger.database("Updating a server in the database");
     return await guild!.save();
 }
 

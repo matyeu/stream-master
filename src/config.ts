@@ -21,7 +21,7 @@ export const PICTURES = {
 }
 
 export const EMOJIS = {
-    succes: "1113508173920342146",
-    error: "1113508234964254803",
+    succes: "1090302290205872209",
+    error: "1090302299521417276",
     information: "1090302882726805535",
 }

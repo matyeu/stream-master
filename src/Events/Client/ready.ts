@@ -1,7 +1,7 @@
 import { AcClient } from "../../Librairie";
 import mongoose from "mongoose";
 import chalk from "chalk";
-import { find as findGuild, edit as editGuild } from "../../Models/server";
+import { find as findServer, edit as editServer, update as updateServer } from "../../Models/server";
 import { readdirSync } from "fs";
 import { SERVER_LIVE, SERVER_DEV } from "../../config";
 
@@ -39,7 +39,11 @@ export default async function (client: AcClient) {
     for (const guild of client.guilds.cache.map(guild => guild)) {
         if (guild.id !== SERVER_LIVE && guild.id !== SERVER_DEV) continue;
 
-        const serverConfig: any = await findGuild(guild.id);
+        const serverConfig: any = await findServer(guild.id);
+
+        await updateServer(guild.id);
+
+        await import("../../Modules/Informations").then(exports => exports.default(client, guild));
 
         const categoryFolder = readdirSync('./src/Commands');
         for (const categoryName of categoryFolder) {
@@ -48,7 +52,7 @@ export default async function (client: AcClient) {
 
             if (!moduleAlready) {
                 categoryDatabase.push({ categoryName, state: false, reason: "" });
-                await editGuild(guild.id, serverConfig);
+                await editServer(guild.id, serverConfig);
             }
         }
 
@@ -67,7 +71,7 @@ export default async function (client: AcClient) {
 
             if (!commandAlready) {
                 cmdDatabase.push({ cmdName, state: false, reason: "" });
-                await editGuild(guild.id, serverConfig);
+                await editServer(guild.id, serverConfig);
             }
         }
     }

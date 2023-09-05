@@ -92,5 +92,13 @@ export default async function (client: AcClient, interaction: Interaction) {
         catch (e) {
             return console.error(e);
         }
+    } else if (interaction.isModalSubmit()) {
+        try {
+            const getModal = client.modals.get(interaction.customId.split(':')[0]);
+            Logger.modal(`The ${interaction.customId} modal was used by ${interaction.user.tag} on the ${interaction.guild?.name} server.`);
+            await getModal.default(client, interaction);
+        } catch (err) {
+            return Logger.error(err);
+        }
     }
 }
