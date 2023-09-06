@@ -31,6 +31,13 @@ export default async function (client: AcClient, interaction: ModalSubmitInterac
 
     let description = '';
 
+    const button = new ActionRowBuilder<ButtonBuilder>().addComponents(
+        new ButtonBuilder()
+            .setCustomId('bug-button')
+            .setLabel('Signaler un problème')
+            .setEmoji("🔧")
+            .setStyle(ButtonStyle.Secondary));
+
 
     if (anime) {
 
@@ -43,7 +50,7 @@ export default async function (client: AcClient, interaction: ModalSubmitInterac
         embed.setDescription(anime.description ? `${anime.description}\n\n${description}` : description)
         if (anime.picture) embed.setImage(anime.picture);
 
-        return interaction.reply({ embeds: [embed], ephemeral: true });
+        return interaction.reply({ embeds: [embed], components: [button], ephemeral: true });
     } else if (serie) {
 
         embed.setTitle(serie.title)
@@ -55,7 +62,7 @@ export default async function (client: AcClient, interaction: ModalSubmitInterac
         embed.setDescription(serie.description ? `${serie.description}\n\n${description}` : description)
         if (serie.picture) embed.setImage(serie.picture);
 
-        return interaction.reply({ embeds: [embed], ephemeral: true });
+        return interaction.reply({ embeds: [embed], components: [button], ephemeral: true });
     } else if (film) {
 
         embed.setTitle(film.title)
@@ -67,7 +74,7 @@ export default async function (client: AcClient, interaction: ModalSubmitInterac
         embed.setDescription(film.description ? `${film.description}\n\n${description}` : description)
         if (film.picture) embed.setImage(film.picture);
 
-        return interaction.reply({ embeds: [embed], ephemeral: true });
+        return interaction.reply({ embeds: [embed], components: [button], ephemeral: true });
     } else if (premium) {
 
         embed.setTitle(premium.title)
@@ -79,7 +86,7 @@ export default async function (client: AcClient, interaction: ModalSubmitInterac
         embed.setDescription(premium.description ? `${premium.description}\n\n${description}` : description)
         if (premium.picture) embed.setImage(premium.picture);
 
-        return interaction.reply({ embeds: [embed], ephemeral: true });
+        return interaction.reply({ embeds: [embed], components: [button], ephemeral: true });
     } else {
 
         const embed = new EmbedBuilder()

@@ -22,7 +22,8 @@ const Server = model(
             soutien: String,
             shop: String,
             suggestion: String,
-            new: String
+            new: String,
+            report: String,
         },
         modules: {
             informations: Boolean
@@ -46,7 +47,8 @@ export const def = {
         soutien: "",
         shop: "",
         suggestion: "",
-        new: ""
+        new: "",
+        report: "",
     },
     modules: {
         informations: false
