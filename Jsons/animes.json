@@ -10,6 +10,87 @@
         }
     },
     {
+        "name": "Ajin",
+        "identifiant": "ajin",
+        "title": "Ajin",
+        "description": null,
+        "picture": "https://i.pinimg.com/originals/a0/ca/80/a0ca80fb6bc509d73a86143a3c9f1d0e.gif",
+        "saisons": {
+            "saison1": "https://mega.nz/folder/mJVS2JQa#yDTk3F7T3V-a2B5nfwYSAg",
+            "saison2": "https://mega.nz/folder/eVcyhLCI#Ohaop82p5Vw-eP43g-b09g"
+        }
+    },
+    {
+        "name": "Akame ga Kill",
+        "identifiant": "akamegakill",
+        "title": "Akame ga Kill",
+        "description": null,
+        "picture": "https://www.nautiljon.com/images/more/00/33/57133.webp",
+        "saisons": {
+            "saison1": "https://mega.nz/folder/e7ZAVDRJ#lLKu-EnNHwc9Q-9SW12y6A"
+        }
+    },
+    {
+        "name": "Akuma No Riddle",
+        "identifiant": "akumanoriddle",
+        "title": "Akuma No Riddle",
+        "description": null,
+        "picture": "https://i.pinimg.com/originals/42/50/d7/4250d710140d24ae5b1a3ae050f77f6b.gif",
+        "saisons": {
+            "saison1": "https://mega.nz/folder/yF1THTYR#58fZ7mdSXTflxSuUqCghoQ"
+        }
+    },
+    {
+        "name": "All out",
+        "identifiant": "allout",
+        "title": "All out",
+        "description": null,
+        "picture": "https://images-ext-1.discordapp.net/external/yhUXz6SOgGYQicbUkiDtfjhBsHQp32Pe0KPMIIyjOTE/https/i.pinimg.com/originals/34/bc/c3/34bcc32c4a5310fd90d27c3a65ddb75d.gif",
+        "saisons": {
+            "saison1": "https://mega.nz/folder/yF1THTYR#58fZ7mdSXTflxSuUqCghoQ"
+        }
+    },
+    {
+        "name": "Anehame",
+        "identifiant": "anehame",
+        "title": "Anehame",
+        "description": null,
+        "picture": "https://somoskudasai.com/wp-content/uploads/2022/03/Portada-3.jpg",
+        "saisons": {
+            "intégral": "https://mega.nz/folder/AgtEiT7Q#w_t6QuzpQ6U74Kh6POJ_RA"
+        }
+    },
+    {
+        "name": "Angel Of Death",
+        "identifiant": "angelofdeath",
+        "title": "Angel Of Death",
+        "description": null,
+        "picture": "https://media.tenor.com/vqzZ5e8RfX8AAAAd/anime-angel-of-death.gif",
+        "saisons": {
+            "saison1": "https://mega.nz/folder/m3gm0CxA#kjetB0BK89RoH0ysRznvdw"
+        }
+    },
+    {
+        "name": "Another",
+        "identifiant": "another",
+        "title": "Another",
+        "description": null,
+        "picture": "https://www.manga-news.com/public/images/pix/dvd/1287/another-anime-visual-3.jpg",
+        "saisons": {
+            "intégral": "https://mega.nz/folder/nqZnwI7B#e_UworeIyNNQRhNvwjdG2g/folder/Hv4W2ZaK"
+        }
+    },
+    {
+        "name": "Ao ashi",
+        "identifiant": "aoashi",
+        "title": "Ao ashi",
+        "description": null,
+        "picture": "https://media.tenor.com/2sxIdt0J9kwAAAAC/ao-ashi-togashi.gif",
+        "saisons": {
+            "intégral": "https://mega.nz/folder/pGdBVbhR#DCDWlTGFdU4jMy6rJASwuA"
+        }
+    },
+    {
         "name": "One Piece",
         "identifiant": "onepiece",
         "title": "One Piece",
