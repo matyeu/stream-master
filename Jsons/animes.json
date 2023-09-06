@@ -1,24 +1,32 @@
 [
     {
-        "name" : "One Piece",
+        "name": "Ahiru no sora",
+        "identifiant": "ahirunosora",
+        "title": "Ahiru no sora",
+        "description": null,
+        "picture": "https://i.pinimg.com/originals/2d/c6/35/2dc63578706b1324134d52e691d4e61b.gif",
+        "saisons": {
+            "intégral": "https://mega.nz/folder/mFFTnbgA#_mW80Fl_I_fhAjXUDDdEFg"
+        }
+    },
+    {
+        "name": "One Piece",
         "identifiant": "onepiece",
         "title": "One Piece",
         "description": null,
         "picture": "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/05/06/node_749505/46982263/public/2020/05/06/B9723396273Z.1_20200506170704_000%2BG02FVMCAG.1-0.jpg?itok=qntyo5h_1588777631",
         "saisons": {
             "saison1": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/PjpBCawR",
-            "saison2": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/PjpBCawR",
-            "saison3": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/PjpBCawR"
+            "saison2": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/OzoAkb7R",
+            "saison3": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/T6Zy1TRD"
         }
     },
-
     {
-        "name" : "One peice kai",
+        "name": "One peice kai",
         "identifiant": "onepiecekai",
         "title": "One Piece Kai",
         "description": null,
         "picture": "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/05/06/node_749505/46982263/public/2020/05/06/B9723396273Z.1_20200506170704_000%2BG02FVMCAG.1-0.jpg?itok=qntyo5h_1588777631",
-
         "saisons": {
             "saison1": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/PjpBCawR",
             "saison2": "https://mega.nz/folder/LnBXjIZS#JH9ltZR9kSOXdYHesZvHuw/folder/PjpBCawR"
