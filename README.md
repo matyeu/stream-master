@@ -9,13 +9,18 @@
 
 <br>
 
-![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)
-
 **ANIME & CHILL** has all the tools you will need for your Discord server,<br>
 **ANIME & CHILL** is a multi-function Discord bot developped by [matyeu](https://discord.com/users/916444775861850175). You can invite the hosted version [here](#)<br>
 **ANIME & CHILL** is a streaming bot for series, movies, anime ect...
 
 ## Commands
+
+### Administration
+
+| Name          | Description                          | Sub-commands                | Usage                 | Cd     |
+| ------------- | ------------------------------------ | --------------------------- | --------------------- | ------ |
+| nouveaute     | To indicate new additions            | none                        | none                  | 10secs |
+
 
 ### Developpement
 
