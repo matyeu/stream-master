@@ -21,7 +21,7 @@ export async function buttonsCatalog(client: AcClient, interaction: ButtonIntera
         premium: "✨"
     }
 
-    const itemsPerPage = 10;
+    const itemsPerPage = 30;
     let currentPage = 0;
 
     const json = require(`../../../Jsons/${interaction.customId}s.json`);
