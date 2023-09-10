@@ -15,18 +15,23 @@ const Server = model(
             commandes: Array,
             category: Array,
         },
+        category: {
+            support: String,
+        },
         channels: {
             catalog: String,
             research: String,
-            support: String,
+            supportServer: String,
             soutien: String,
             shop: String,
             suggestion: String,
             new: String,
             report: String,
+            support: String,
         },
         modules: {
-            informations: Boolean
+            informations: Boolean,
+            tickets: Boolean
         }
     })
 )
@@ -40,18 +45,23 @@ export const def = {
         commandes: Array,
         category: Array,
     },
+    category: {
+        support: "",
+    },
     channels: {
         catalog: "",
         research: "",
-        support: "",
+        supportServer: "",
         soutien: "",
         shop: "",
         suggestion: "",
         new: "",
         report: "",
+        support: ""
     },
     modules: {
-        informations: false
+        informations: false,
+        tickets: false
     }
 };
 

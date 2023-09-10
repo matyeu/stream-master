@@ -85,7 +85,7 @@ Nous comptons déja **${i}** Liens ajoutés !
 Cliquez sur le bouton 🔎 ci-dessous pour trouver ce que vous souhaitez. Pour voir la liste : <#${serverConfig.channels.catalog}>
 
 **⭕・Un Probleme ?**
-Allez dans le salon ⁠<#${serverConfig.channels.support}> !
+Allez dans le salon ⁠<#${serverConfig.channels.supportServer}> !
 
 **✨・Comment nous soutenir ?**
 Allez dans le salon ⁠<#${serverConfig.channels.soutien}> !
