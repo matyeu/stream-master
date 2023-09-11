@@ -22,6 +22,9 @@ const Server = model(
             probleme: String,
         },
         channels: {
+            logs: {
+                support: String
+            },
             catalog: String,
             research: String,
             supportServer: String,
@@ -32,9 +35,24 @@ const Server = model(
             report: String,
             support: String,
         },
+        roles: {
+            developer: String,
+            moderator: String,
+            helper: String,
+            designer: String,
+            teamGestion: String,
+            teamMod: String,
+            teamCreative: String,
+        },
         modules: {
             informations: Boolean,
             tickets: Boolean
+        },
+        stats: {
+            support: Number,
+            recruitment: Number,
+            member: Number,
+            probleme: Number,
         }
     })
 )
@@ -55,6 +73,9 @@ export const def = {
         probleme: "",
     },
     channels: {
+        logs: {
+            support: ""
+        },
         catalog: "",
         research: "",
         supportServer: "",
@@ -65,9 +86,24 @@ export const def = {
         report: "",
         support: ""
     },
+    roles: {
+        developer: "",
+        moderator: "",
+        helper: "",
+        designer: "",
+        teamGestion: "",
+        teamMod: "",
+        teamCreative: "",
+    },
     modules: {
         informations: false,
         tickets: false
+    },
+    stats: {
+        support: 0,
+        recruitment: 0,
+        member: 0,
+        probleme: 0,
     }
 };
 

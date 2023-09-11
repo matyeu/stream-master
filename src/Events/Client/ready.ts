@@ -44,6 +44,7 @@ export default async function (client: SmClient) {
         await updateServer(guild.id);
 
         await import("../../Modules/Informations").then(exports => exports.default(client, guild));
+        await import("../../Modules/Tickets").then(exports => exports.default(client, guild));
 
         const categoryFolder = readdirSync('./src/Commands');
         for (const categoryName of categoryFolder) {
