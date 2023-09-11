@@ -1,4 +1,4 @@
-import { getFilesRecursive, AcClient } from "./index";
+import { getFilesRecursive, SmClient } from "./index";
 import path from "path";
 import chalk from 'chalk';
 
@@ -11,7 +11,7 @@ console.log(chalk.bgGreen(" © 2023 ANIME & CHILL - Discord BOT developed by mat
 console.log(chalk.bgGreen("                                                         "));
 console.log('')
 
-export function loadCommands(client: AcClient) {
+export function loadCommands(client: SmClient) {
     let commandFiles = getFilesRecursive(path.resolve(__dirname, "../Commands"));
     let i = 0;
     for (const commandFile of commandFiles) {
@@ -29,7 +29,7 @@ export function loadCommands(client: AcClient) {
 
 };
 
-export function loadEvents(client: AcClient) {
+export function loadEvents(client: SmClient) {
     let eventFiles = getFilesRecursive(path.resolve(__dirname, "../Events"));
     let i = 0;
     for (const eventFile of eventFiles) {
@@ -43,7 +43,7 @@ export function loadEvents(client: AcClient) {
     Logger.event(`${i} loaded events`);
 };
 
-export function loadButtons(client: AcClient) {
+export function loadButtons(client: SmClient) {
     let buttonFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Buttons"));
     let i = 0;
     for (const buttonFile of buttonFiles) {
@@ -60,7 +60,7 @@ export function loadButtons(client: AcClient) {
     Logger.button(`${i} loaded buttons`)
 };
 
-export function loadSelectMenus(client: AcClient) {
+export function loadSelectMenus(client: SmClient) {
     let selectFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Selectmenus"));
     let i = 0;
     for (const selectFile of selectFiles) {
@@ -77,7 +77,7 @@ export function loadSelectMenus(client: AcClient) {
     Logger.select(`${i} loaded selects`)
 };
 
-export function loadModals(client: AcClient) {
+export function loadModals(client: SmClient) {
     let modalFiles = getFilesRecursive(path.resolve(__dirname, "../Interactions/Modals"));
     let i = 0;
     for (const modalFile of modalFiles) {

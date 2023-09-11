@@ -1,8 +1,8 @@
-import {AcClient} from "../../Librairie";
+import {SmClient} from "../../Librairie";
 import {CommandInteraction, EmbedBuilder} from "discord.js";
 import {EMBED_INFO, FOOTER, } from "../../config";
 
-export default async function (client: AcClient, interaction: CommandInteraction) {
+export default async function (client: SmClient, interaction: CommandInteraction) {
 
     const start = Date.now();
     interaction.reply({content: "Pong !"}).then(() => {

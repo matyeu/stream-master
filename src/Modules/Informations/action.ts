@@ -1,11 +1,11 @@
 import { ButtonInteraction, EmbedBuilder, TextInputBuilder, TextInputStyle, ModalBuilder, ActionRowBuilder, ModalSubmitInteraction, ButtonBuilder, ButtonStyle } from "discord.js";
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { EMBED_GENERAL, FOOTER, IDLE_BUTTON } from "../../config";
 import { find } from "../../Models/server";
 
 const Logger = require("../../Librairie/logger");
 
-export async function buttonsCatalog(client: AcClient, interaction: ButtonInteraction) {
+export async function buttonsCatalog(client: SmClient, interaction: ButtonInteraction) {
 
     Logger.button(`The ${interaction.customId} button was used by ${interaction.user?.tag} on the ${interaction.guild?.name} server.`);
 
@@ -89,7 +89,7 @@ export async function buttonsCatalog(client: AcClient, interaction: ButtonIntera
 
 }
 
-export async function buttonsReasearch(client: AcClient, interaction: ButtonInteraction) {
+export async function buttonsReasearch(client: SmClient, interaction: ButtonInteraction) {
 
     Logger.button(`The ${interaction.customId} button was used by ${interaction.user?.tag} on the ${interaction.guild?.name} server.`);
 

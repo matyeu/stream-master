@@ -1,4 +1,4 @@
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { ModalSubmitInteraction, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ButtonInteraction } from "discord.js";
 import { EMBED_ERROR, EMBED_GENERAL, EMOJIS, FOOTER, } from "../../config";
 import { buttonsReasearch } from "../../Modules/Informations/action";
@@ -8,7 +8,7 @@ const seriesJson = require(`../../../Jsons/series.json`);
 const filmsJson = require(`../../../Jsons/films.json`);
 const premiumJson = require(`../../../Jsons/premiums.json`);
 
-export default async function (client: AcClient, interaction: ModalSubmitInteraction) {
+export default async function (client: SmClient, interaction: ModalSubmitInteraction) {
 
     const researchName = interaction.fields.getTextInputValue('researchName').toLowerCase().replace(/\s/g, '');
 

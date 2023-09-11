@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, TextChannel } from "discord.js";
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { EMBED_GENERAL, FOOTER } from "../../config";
 import { find } from "../../Models/server";
 
@@ -16,7 +16,7 @@ filmsJson.map((e: any) => { for (const _ in e.saisons) { i++ } });
 premiumJson.map((e: any) => { for (const _ in e.saisons) { i++ } });
 
 
-export async function createCatalogEmbed(client: AcClient, channel: TextChannel) {
+export async function createCatalogEmbed(client: SmClient, channel: TextChannel) {
 
     const serverConfig: any = await find(channel.guild.id);
 
@@ -70,7 +70,7 @@ export async function createCatalogEmbed(client: AcClient, channel: TextChannel)
     return message;
 };
 
-export async function createResearchEmbed(client: AcClient, channel: TextChannel) {
+export async function createResearchEmbed(client: SmClient, channel: TextChannel) {
 
     const serverConfig: any = await find(channel.guild.id);
 

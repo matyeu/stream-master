@@ -1,9 +1,9 @@
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, ModalSubmitInteraction} from "discord.js";
 import { find } from "../../Models/server";
 import { EMBED_GENERAL, FOOTER } from "../../config";
 
-export default async function (client: AcClient, interaction: ModalSubmitInteraction) {
+export default async function (client: SmClient, interaction: ModalSubmitInteraction) {
 
     const serverConfig: any = await find(interaction.guild!.id);
 

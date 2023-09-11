@@ -1,10 +1,10 @@
 import { GatewayIntentBits, Partials } from 'discord.js';
-import { AcClient } from "./Librairie";
+import { SmClient } from "./Librairie";
 const { loadCommands, loadEvents, loadButtons, loadSelectMenus, loadModals } = require("./Librairie/loader");
 const Logger = require("./Librairie/logger");
 require("dotenv").config();
 
-const client = new AcClient({
+const client = new SmClient({
     partials: [Partials.Message, Partials.Channel, Partials.Reaction],
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences, GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildVoiceStates,

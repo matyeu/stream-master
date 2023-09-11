@@ -17,6 +17,9 @@ const Server = model(
         },
         category: {
             support: String,
+            recruiting: String,
+            member: String,
+            probleme: String,
         },
         channels: {
             catalog: String,
@@ -47,6 +50,9 @@ export const def = {
     },
     category: {
         support: "",
+        recruiting: "",
+        member: "",
+        probleme: "",
     },
     channels: {
         catalog: "",

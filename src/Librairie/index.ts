@@ -12,7 +12,7 @@ import {
 import * as fs from "fs";
 import { EMOJIS } from "../config";
 
-export class AcClient extends Client {
+export class SmClient extends Client {
     public config: Object;
     public slashCommands: Collection<any, any>;
     public messageCommands: Collection<any, any>;
@@ -54,7 +54,7 @@ export class AcClient extends Client {
         }
     }
 
-    async getClientChannel(client: AcClient, snowflake: Snowflake, messageData: BaseMessageOptions) {
+    async getClientChannel(client: SmClient, snowflake: Snowflake, messageData: BaseMessageOptions) {
         if (snowflake) {
             let channel = <TextChannel>client.channels.cache.get(snowflake);
             if (channel) {
@@ -66,127 +66,127 @@ export class AcClient extends Client {
 
 declare module "discord.js" {
     interface CommandInteraction {
-        replySuccessMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replySuccessMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyErrorMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyErrorMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyInfoMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyInfoMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        editSuccessMessage(client: AcClient, content: string): any;
+        editSuccessMessage(client: SmClient, content: string): any;
 
-        editErrorMessage(client: AcClient, content: string): any;
+        editErrorMessage(client: SmClient, content: string): any;
     }
 
     interface AutocompleteInteraction {
-        replySuccessMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replySuccessMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyErrorMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyErrorMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyInfoMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyInfoMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        editSuccessMessage(client: AcClient, content: string): any;
+        editSuccessMessage(client: SmClient, content: string): any;
 
-        editErrorMessage(client: AcClient, content: string): any;
+        editErrorMessage(client: SmClient, content: string): any;
     }
 
     interface ButtonInteraction {
-        replySuccessMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replySuccessMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyErrorMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyErrorMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyInfoMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyInfoMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        editSuccessMessage(client: AcClient, content: string): any;
+        editSuccessMessage(client: SmClient, content: string): any;
 
-        editErrorMessage(client: AcClient, content: string): any;
+        editErrorMessage(client: SmClient, content: string): any;
     }
 
     interface SelectMenuInteraction {
-        replySuccessMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replySuccessMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyErrorMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyErrorMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyInfoMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyInfoMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        editSuccessMessage(client: AcClient, content: string): any;
+        editSuccessMessage(client: SmClient, content: string): any;
 
-        editErrorMessage(client: AcClient, content: string): any;
+        editErrorMessage(client: SmClient, content: string): any;
     }
 
     interface ModalSubmitInteraction {
-        replySuccessMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replySuccessMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyErrorMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyErrorMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        replyInfoMessage(client: AcClient, content: string, ephemeral: boolean): Promise<void>;
+        replyInfoMessage(client: SmClient, content: string, ephemeral: boolean): Promise<void>;
 
-        editSuccessMessage(client: AcClient, content: string): any;
+        editSuccessMessage(client: SmClient, content: string): any;
 
-        editErrorMessage(client: AcClient, content: string): any;
+        editErrorMessage(client: SmClient, content: string): any;
     }
 }
 
-CommandInteraction.prototype.replySuccessMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+CommandInteraction.prototype.replySuccessMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}`, ephemeral: ephemeral });
 };
-CommandInteraction.prototype.replyErrorMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+CommandInteraction.prototype.replyErrorMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.error)} | ${content}`, ephemeral: ephemeral });
 };
-CommandInteraction.prototype.replyInfoMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+CommandInteraction.prototype.replyInfoMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.information)} | ${content}`, ephemeral: ephemeral });
 };
-CommandInteraction.prototype.editSuccessMessage = async function (client: AcClient, content: string) {
+CommandInteraction.prototype.editSuccessMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
-CommandInteraction.prototype.editErrorMessage = function (client: AcClient, content: string) {
+CommandInteraction.prototype.editErrorMessage = function (client: SmClient, content: string) {
     return this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
 
-ButtonInteraction.prototype.replySuccessMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ButtonInteraction.prototype.replySuccessMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}`, ephemeral: ephemeral });
 };
-ButtonInteraction.prototype.replyErrorMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ButtonInteraction.prototype.replyErrorMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.error)} | ${content}`, ephemeral: ephemeral });
 };
-ButtonInteraction.prototype.replyInfoMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ButtonInteraction.prototype.replyInfoMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.information)} | ${content}`, ephemeral: ephemeral });
 };
-ButtonInteraction.prototype.editSuccessMessage = async function (client: AcClient, content: string) {
+ButtonInteraction.prototype.editSuccessMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
-ButtonInteraction.prototype.editErrorMessage = async function (client: AcClient, content: string) {
+ButtonInteraction.prototype.editErrorMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
 
-SelectMenuInteraction.prototype.replySuccessMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+SelectMenuInteraction.prototype.replySuccessMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}`, ephemeral: ephemeral });
 };
-SelectMenuInteraction.prototype.replyErrorMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+SelectMenuInteraction.prototype.replyErrorMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.error)} | ${content}`, ephemeral: ephemeral });
 };
-SelectMenuInteraction.prototype.replyInfoMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+SelectMenuInteraction.prototype.replyInfoMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.information)} | ${content}`, ephemeral: ephemeral });
 };
-SelectMenuInteraction.prototype.editSuccessMessage = async function (client: AcClient, content: string) {
+SelectMenuInteraction.prototype.editSuccessMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
-SelectMenuInteraction.prototype.editErrorMessage = async function (client: AcClient, content: string) {
+SelectMenuInteraction.prototype.editErrorMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
 
-ModalSubmitInteraction.prototype.replySuccessMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ModalSubmitInteraction.prototype.replySuccessMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}`, ephemeral: ephemeral });
 };
-ModalSubmitInteraction.prototype.replyErrorMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ModalSubmitInteraction.prototype.replyErrorMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.error)} | ${content}`, ephemeral: ephemeral });
 };
-ModalSubmitInteraction.prototype.replyInfoMessage = async function (client: AcClient, content: string, ephemeral: boolean) {
+ModalSubmitInteraction.prototype.replyInfoMessage = async function (client: SmClient, content: string, ephemeral: boolean) {
     await this.reply({ content: `${client.getEmoji(EMOJIS.information)} | ${content}`, ephemeral: ephemeral });
 };
-ModalSubmitInteraction.prototype.editSuccessMessage = async function (client: AcClient, content: string) {
+ModalSubmitInteraction.prototype.editSuccessMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.succes)} | ${content}` });
 };
-ModalSubmitInteraction.prototype.editErrorMessage = async function (client: AcClient, content: string) {
+ModalSubmitInteraction.prototype.editErrorMessage = async function (client: SmClient, content: string) {
     await this.editReply({ content: `${client.getEmoji(EMOJIS.error)} | ${content}` });
 };
 

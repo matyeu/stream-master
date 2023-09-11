@@ -1,4 +1,4 @@
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import mongoose from "mongoose";
 import chalk from "chalk";
 import { find as findServer, edit as editServer, update as updateServer } from "../../Models/server";
@@ -8,7 +8,7 @@ import { SERVER_LIVE, SERVER_DEV } from "../../config";
 const Logger = require("../../Librairie/logger");
 const synchronizeSlashCommands = require('discord-sync-commands-v2');
 
-export default async function (client: AcClient) {
+export default async function (client: SmClient) {
     console.log(chalk.grey('--------------------------------'));
     Logger.client(`Connected as "${client.user!.tag}"`);
     Logger.client(`For ${client.guilds.cache.map(g => g.memberCount).reduce((a, b) => a + b)} users, for ${client.channels.cache.size} channels, for ${client.guilds.cache.size} servers discord !`);

@@ -1,11 +1,11 @@
 import { Collection, Interaction, EmbedBuilder } from "discord.js";
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { find as findGuild } from "../../Models/server";
 import { EMBED_INFO } from "../../config";
 
 const Logger = require("../../Librairie/logger");
 
-export default async function (client: AcClient, interaction: Interaction) {
+export default async function (client: SmClient, interaction: Interaction) {
 
     const serverConfig: any = await findGuild(interaction.guild!.id);
     const administrators = serverConfig.administrators;

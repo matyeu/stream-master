@@ -1,12 +1,12 @@
 import { ButtonInteraction, Guild, ModalSubmitInteraction, TextChannel } from "discord.js";
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 import { find } from "../../Models/server";
 import { createCatalogEmbed, createResearchEmbed } from "./embeds";
 import { buttonsCatalog, buttonsReasearch } from "./action";
 
 const Logger = require("../../Librairie/logger");
 
-export default async function (client: AcClient, guild: Guild) {
+export default async function (client: SmClient, guild: Guild) {
 
     const serverConfig: any = await find(guild.id);
 

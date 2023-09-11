@@ -1,8 +1,8 @@
 import { ButtonInteraction, EmbedBuilder } from "discord.js";
-import { AcClient } from "../../../Librairie";
+import { SmClient } from "../../../Librairie";
 import { EMBED_ERROR, EMOJIS, FOOTER } from "../../../config";
 
-export default async function (client: AcClient, interaction: ButtonInteraction) {
+export default async function (client: SmClient, interaction: ButtonInteraction) {
 
     const member = await interaction.guild!.members.fetch(interaction.user.id);
 

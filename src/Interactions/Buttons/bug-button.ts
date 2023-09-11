@@ -1,7 +1,7 @@
 import { ActionRowBuilder, ButtonInteraction, ModalBuilder, TextInputBuilder, TextInputStyle } from "discord.js";
-import { AcClient } from "../../Librairie";
+import { SmClient } from "../../Librairie";
 
-export default async function (client: AcClient, interaction: ButtonInteraction) {
+export default async function (client: SmClient, interaction: ButtonInteraction) {
 
     const modalReasearch: any = new ModalBuilder()
         .setCustomId('bug-modal')
