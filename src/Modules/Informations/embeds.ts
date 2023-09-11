@@ -42,19 +42,17 @@ export async function createCatalogEmbed(client: SmClient, channel: TextChannel)
         )
         .addComponents(
             new ButtonBuilder()
-                .setCustomId("series")
+                .setCustomId("serie")
                 .setLabel("Séries")
                 .setEmoji('🎬')
-                .setStyle(ButtonStyle.Secondary)
-                .setDisabled(true)
+                .setStyle(ButtonStyle.Primary)
         )
         .addComponents(
             new ButtonBuilder()
                 .setCustomId("film")
                 .setLabel("Films")
                 .setEmoji('📽️')
-                .setStyle(ButtonStyle.Secondary)
-                .setDisabled(true)
+                .setStyle(ButtonStyle.Primary)
         )
 
         .addComponents(
