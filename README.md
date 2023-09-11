@@ -1,4 +1,4 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="SHB" src="https://cdn.discordapp.com/attachments/1147245363447734292/1147245418158227526/a_a02f784e69e6f81c2f0a9404af71bdc0.png">
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="SHB" src="https://cdn.discordapp.com/attachments/1147245363447734292/1150813293095682058/stream-master.jpg">
 
 # STREAM MASTER
 
