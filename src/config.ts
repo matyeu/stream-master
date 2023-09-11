@@ -8,10 +8,10 @@ export const EMBED_INFO = "#69A1CC";
 export const EMBED_CLOSE = "#d4d221";
 
 export const FOOTER = "STREAM MASTER- All rights reserved";
-export const FOOTER_MODERATION = "STREAM MASTER- Modération";
-export const FOOTER_CASINO = "STREAM MASTER- Casino";
-export const FOOTER_LOG = "STREAM MASTER- Logs";
-export const FOOTER_TICKET = "STREAM MASTER- Tickets";
+export const FOOTER_MODERATION = "STREAM MASTER - Modération";
+export const FOOTER_CASINO = "STREAM MASTER - Casino";
+export const FOOTER_LOG = "STREAM MASTER - Logs";
+export const FOOTER_TICKET = "STREAM MASTER - Tickets";
 
 export const IDLE_BUTTON = 60000;
 
