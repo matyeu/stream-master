@@ -1,6 +1,6 @@
 <img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="SHB" src="https://cdn.discordapp.com/attachments/1147245363447734292/1147245418158227526/a_a02f784e69e6f81c2f0a9404af71bdc0.png">
 
-# ANIME & CHILL
+# STREAM MASTER
 
 [![](https://img.shields.io/discord/1071891755911368806.svg?logo=discord&colorB=7289DA)](https://discord.gg/TrG3efTzWW)
 [![](https://img.shields.io/badge/discord.js-v14.0.0-blue.svg?logo=npm)](https://discord.js.org/)
@@ -9,9 +9,9 @@
 
 <br>
 
-**ANIME & CHILL** has all the tools you will need for your Discord server,<br>
-**ANIME & CHILL** is a multi-function Discord bot developped by [matyeu](https://discord.com/users/916444775861850175). You can invite the hosted version [here](#)<br>
-**ANIME & CHILL** is a streaming bot for series, movies, anime ect...
+**STREAM MASTER** has all the tools you will need for your Discord server,<br>
+**STREAM MASTER** is a multi-function Discord bot developped by [matyeu](https://discord.com/users/916444775861850175). You can invite the hosted version [here](#)<br>
+**STREAM MASTER** is a streaming bot for series, movies, anime ect...
 
 ## Commands
 

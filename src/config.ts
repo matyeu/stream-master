@@ -7,11 +7,11 @@ export const EMBED_SUCCESS = "#33BEA6";
 export const EMBED_INFO = "#69A1CC";
 export const EMBED_CLOSE = "#d4d221";
 
-export const FOOTER = "ANIME & CHILL - All rights reserved";
-export const FOOTER_MODERATION = "ANIME & CHILL - Modération";
-export const FOOTER_CASINO = "ANIME & CHILL - Casino";
-export const FOOTER_LOG = "ANIME & CHILL - Logs";
-export const FOOTER_TICKET = "ANIME & CHILL - Tickets";
+export const FOOTER = "STREAM MASTER- All rights reserved";
+export const FOOTER_MODERATION = "STREAM MASTER- Modération";
+export const FOOTER_CASINO = "STREAM MASTER- Casino";
+export const FOOTER_LOG = "STREAM MASTER- Logs";
+export const FOOTER_TICKET = "STREAM MASTER- Tickets";
 
 export const IDLE_BUTTON = 60000;
 
@@ -24,4 +24,6 @@ export const EMOJIS = {
     succes: "1090302290205872209",
     error: "1090302299521417276",
     information: "1090302882726805535",
+    staff: "1090302339325378684",
+    yeah: "1090306358718517248"
 }

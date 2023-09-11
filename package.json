@@ -1,5 +1,5 @@
 {
-  "name": "anime-chill",
+  "name": "stream-master",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matyeu/anime-chill.git"
+    "url": "git+https://github.com/matyeu/stream-master.git"
   },
   "author": "matyeu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matyeu/anime-chill/issues"
+    "url": "https://github.com/matyeu/stream-master/issues"
   },
-  "homepage": "https://github.com/matyeu/anime-chill#readme"
+  "homepage": "https://github.com/matyeu/stream-master#readme"
 }
