@@ -34,6 +34,7 @@ const Server = model(
             new: String,
             report: String,
             support: String,
+            invite: String,
         },
         roles: {
             developer: String,
@@ -84,7 +85,8 @@ export const def = {
         suggestion: "",
         new: "",
         report: "",
-        support: ""
+        support: "",
+        invite: "",
     },
     roles: {
         developer: "",

@@ -36,6 +36,11 @@ export default async function (client: SmClient) {
     mongoose.Promise = global.Promise;
     console.log(chalk.grey('--------------------------------'));
 
+    client.guilds.cache.forEach(async (guild) => {
+        const firstInvite = await guild.invites.fetch();
+        client.invite.set(guild.id, new Map(firstInvite.map((invite) => [invite.code, invite.uses])));
+    });
+
     for (const guild of client.guilds.cache.map(guild => guild)) {
         if (guild.id !== SERVER_LIVE && guild.id !== SERVER_DEV) continue;
 
