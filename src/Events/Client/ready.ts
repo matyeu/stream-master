@@ -34,6 +34,7 @@ export default async function (client: SmClient) {
     })
 
     mongoose.Promise = global.Promise;
+    if (process.env.ENABLED === "ON") require("../../Librairie/dashboard")(client);
     console.log(chalk.grey('--------------------------------'));
 
     client.guilds.cache.forEach(async (guild) => {

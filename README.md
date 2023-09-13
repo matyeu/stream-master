@@ -28,6 +28,12 @@
 | ------------- | ------------------------------------ | --------------------------- | --------------------- | ------ |
 | ping          | Ping the bot.                        | none                        | none                  | 10secs |
 
+## A powerful Dashboard
+
+STREAM MASTER has its own dashboard which also offers many features! The dashboard runs with Express and EJS!
+
+*Coming soon... 👀*
+
 
 ## Configuration
 
