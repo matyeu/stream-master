@@ -12,11 +12,11 @@ export function warn(content: string) {
 }
 
 export function command(content: string) {
-    write(content, 'black', 'bgMagenta', 'CMD', false)
+    write(content, 'black', 'bgMagenta', 'COMMAND', false)
 }
 
 export function event(content: string) {
-    write(content, 'black', 'bgGreen', 'EVT', false)
+    write(content, 'black', 'bgGreen', 'EVENT', false)
 }
 
 export function client(content: string) {
@@ -24,15 +24,15 @@ export function client(content: string) {
 }
 
 export function button(content: string) {
-    write(content, 'black', 'bgCyan', 'BTN', false)
+    write(content, 'black', 'bgCyan', 'BUTTON', false)
 }
 
 export function select(content: string) {
-    write(content, 'black', 'bgWhite', 'SLT', false)
+    write(content, 'black', 'bgWhite', 'SELECT', false)
 }
 
 export function modal(content: string) {
-    write(content, 'white', 'bgYellow', 'MDL', false)
+    write(content, 'white', 'bgYellow', 'MODAL', false)
 }
 
 export function module(content: string) {
@@ -40,7 +40,7 @@ export function module(content: string) {
 }
 
 export function database(content: string) {
-    write(content, 'black', 'bgWhite', 'DB', false)
+    write(content, 'black', 'bgWhite', 'DATABASE', false)
 }
 
 function write(content: string, tagColor: string, bgTagColor: string, tag: string, error = false) {
