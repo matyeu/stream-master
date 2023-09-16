@@ -20,6 +20,7 @@
 | Name          | Description                          | Sub-commands                | Usage                 | Cd     |
 | ------------- | ------------------------------------ | --------------------------- | --------------------- | ------ |
 | nouveaute     | To indicate new additions            | none                        | none                  | 10secs |
+| giveaway      | Allows you to launch a giveaway.     | start, reroll               | none                  | 10secs |
 
 
 ### Developpement
