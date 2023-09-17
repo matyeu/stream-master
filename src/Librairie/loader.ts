@@ -7,7 +7,7 @@ const Logger = require("./logger");
 console.clear();
 
 console.log(chalk.bgGreen("                                                         "));
-console.log(chalk.bgGreen(" © 2023 ANIME & CHILL - Discord BOT developed by matyeu. "));
+console.log(chalk.bgGreen(" © 2023 STREAM MASTER - Discord BOT developed by matyeu. "));
 console.log(chalk.bgGreen("                                                         "));
 console.log('')
 
