@@ -3,10 +3,10 @@ import { ModalSubmitInteraction, EmbedBuilder, ActionRowBuilder, ButtonBuilder, 
 import { EMBED_ERROR, EMBED_GENERAL, EMOJIS, FOOTER, } from "../../config";
 import { buttonsReasearch } from "../../Modules/Informations/action";
 
-const animesJson = require(`../../../Jsons/animes.json`);
-const seriesJson = require(`../../../Jsons/series.json`);
-const filmsJson = require(`../../../Jsons/films.json`);
-const premiumJson = require(`../../../Jsons/premiums.json`);
+const animesJson = require(`../../../assets/jsons/animes.json`);
+const seriesJson = require(`../../../assets/jsons/series.json`);
+const filmsJson = require(`../../../assets/jsons/films.json`);
+const premiumJson = require(`../../../assets/jsons/premiums.json`);
 
 export default async function (client: SmClient, interaction: ModalSubmitInteraction) {
 

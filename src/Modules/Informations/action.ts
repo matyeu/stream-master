@@ -24,7 +24,7 @@ export async function buttonsCatalog(client: SmClient, interaction: ButtonIntera
     const itemsPerPage = 30;
     let currentPage = 0;
 
-    const json = require(`../../../Jsons/${interaction.customId}s.json`);
+    const json = require(`../../../assets/jsons/${interaction.customId}s.json`);
     let i = 0;
 
 

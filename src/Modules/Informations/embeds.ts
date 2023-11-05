@@ -3,10 +3,10 @@ import { SmClient } from "../../Librairie";
 import { EMBED_GENERAL, FOOTER } from "../../config";
 import { find } from "../../Models/server";
 
-const animesJson = require(`../../../Jsons/animes.json`);
-const seriesJson = require(`../../../Jsons/series.json`);
-const filmsJson = require(`../../../Jsons/films.json`);
-const premiumJson = require(`../../../Jsons/premiums.json`);
+const animesJson = require(`../../../assets/jsons/animes.json`);
+const seriesJson = require(`../../../assets/jsons/series.json`);
+const filmsJson = require(`../../../assets/jsons/films.json`);
+const premiumJson = require(`../../../assets/jsons/premiums.json`);
 
 let i = 0;
 
