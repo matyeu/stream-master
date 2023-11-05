@@ -16,12 +16,7 @@ export default async function (client: SmClient) {
     client.user!.setPresence({ status: "idle", activities: [{ name: `${client.guilds.cache.map(g => g.memberCount).reduce((a, b) => a + b)} membres`, type: 3 }] });
 
     const connectDB = await mongoose.connect(process.env.APP_DATABASE!, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
         autoIndex: false,
-        poolSize: 10,
         serverSelectionTimeoutMS: 5000,
         socketTimeoutMS: 45000,
         family: 4
