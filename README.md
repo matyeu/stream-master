@@ -1,5 +1,3 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="SHB" src="https://cdn.discordapp.com/attachments/1147245363447734292/1150813293095682058/stream-master.jpg">
-
 # STREAM MASTER
 
 [![](https://img.shields.io/discord/1071891755911368806.svg?logo=discord&colorB=7289DA)](https://discord.gg/TrG3efTzWW)
